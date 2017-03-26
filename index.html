@@ -11,11 +11,6 @@
 
             ga('create', '<UA ID HERE>', 'auto');
             ga('send', 'pageview');
-
-            document.getElementById("sexyfish").addEventListener('ended', function () {
-                ga('send', 'event', 'sexyfish', 'play');
-                this.play();
-            });
         </script>
     </head>
     <body>
@@ -29,5 +24,12 @@
 
             The video is from <a href="https://www.youtube.com/watch?v=JxtpKo2rvos">this YouTube page</a>, and was originally created by Tweedshere.
         </aside>
+
+        <script>
+            document.getElementById("sexyfish").addEventListener('ended', function () {
+                ga('send', 'event', 'sexyfish', 'play');
+                this.play();
+            }, false);
+        </script>
     </body>
 </html>
